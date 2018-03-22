@@ -7,7 +7,7 @@ var app = {
 // JSX - Javascript XML
 var template = (
     <div>
-        <h1>{app.title}</h1> 
+        <h1>{app.title}</h1>
         <p>{app.subtitle}</p>
         <ol>
             <li>Item one</li>
@@ -30,8 +30,8 @@ function getLocation(location) {
 }
 var templateTwo = (
     <div>
-        <h1>{user.name}</h1>
-        <p>Age: {user.age}</p>
+        <h1>{user.name ? user.name : 'Anonymous'}</h1>
+        {(user.age && user.age >= 18) && <p>Age: {user.age}</p>}
         {getLocation(user.location)}
     </div>
 );
