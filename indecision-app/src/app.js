@@ -29,10 +29,7 @@ const render = () => {
             <p>{app.options.length > 0 ? 'Here are your options' : 'No options'}</p>
             <p>{app.options.length}</p>
             <button onClick={onRemoveAll}>Remove All</button>
-            <ol>
-                <li>Item one</li>
-                <li>Item two</li>
-            </ol>
+            <ol>{app.options.map((option) => <li key={option}>{option}</li>)}</ol>
             <form onSubmit={onFormSubmit}>
                 <input type="text" name="option" />
                 <button>Add Option</button>
